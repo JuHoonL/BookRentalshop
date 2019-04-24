@@ -1,0 +1,14 @@
+
+CREATE TABLESPACE bookrental DATAFILE 'd:/bizwork/ordata/bookrental.dbf' SIZE 100M AUTOEXTEND ON NEXT 100k;
+
+CREATE USER bookrentalshop IDENTIFIED BY 6100 DEFAULT TABLESPACE bookrental;
+
+GRANT DBA TO bookrentalshop;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON [TABLE] TO myuser1;
+
+GRANT RESOURCE TO myuser1;
+
+GRANT CREATE SESSION TO myuser1;
+
+ALTER USER bookrentalshop DEFAULT TABLESPACE mytsA;

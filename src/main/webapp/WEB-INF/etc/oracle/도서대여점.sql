@@ -1,0 +1,61 @@
+CREATE TABLE tbl_book (
+    BOOK_SEQ	        NUMBER	            PRIMARY KEY,
+    BOOK_ISBN	        CHAR(13)	        NOT NULL,
+    BOOK_TITLE	        nVARCHAR2(100)	    NOT NULL,	
+    BOOK_AUTHOR 	    nVARCHAR2(100),		
+    BOOK_PRICE  	    NUMBER,		
+    BOOK_DESCRIPTION	nVARCHAR2(1000),		
+    BOOK_IMAGE	        nVARCHAR2(125),		
+    BOOK_LINK	        nVARCHAR2(255),		
+    BOOK_RENT_YN	    CHAR(1)		
+);
+
+SELECT * FROM tbl_book;
+
+DELETE FROM tbl_book;
+
+CREATE SEQUENCE SEQ_BOOK START WITH 300 INCREMENT BY 1;
+
+DROP SEQUENCE SEQ_BOOK ;
+
+CREATE TABLE tbl_juser (
+    USER_SEQ	        NUMBER		        PRIMARY KEY,
+    USER_ID             nVARCHAR2(30)       NOT NULL,
+    USER_PASSWORD       nVARCHAR2(16)       NOT NULL,
+    USER_ROLE           VARCHAR(6)          NOT NULL,
+    USER_NAME	        nVARCHAR2(100)	    NOT	NULL,
+    USER_BIRTH	        CHAR(10),		
+    USER_SEX	        CHAR(1),		
+    USER_PHONE	        nVARCHAR2(100)	    NOT	NULL,
+    USER_MAIL	        nVARCHAR2(1000),		
+    USER_IMAGE	        nVARCHAR2(125),		
+    USER_REG_DATE	    CHAR(10),		
+    USER_OUT_DATE	    CHAR(10),		
+    USER_OUT_YN	        CHAR(1),
+    USER_POINT          NUMBER,
+    USER_RENT_COUNT	    NUMBER,		
+    USER_RENT_TOTAL	    NUMBER		
+);
+
+SELECT * FROM tbl_juser;
+
+DROP TABLE tbl_juser;
+
+CREATE SEQUENCE SEQ_JUSER START WITH 1 INCREMENT BY 1;
+
+CREATE TABLE tbl_rent (
+    RENT_SEQ	        NUMBER		PRIMARY KEY,
+    RENT_DATE	        CHAR(10)	NOT	NULL,
+    RENT_RETURN_DATE	CHAR(10)	NOT NULL,	
+    BOOK_SEQ	    NUMBER	    NOT	NULL,
+    USER_SEQ	    NUMBER	    NOT	NULL,
+    RENT_RETURN_YN	    CHAR(1)		
+);
+
+DROP TABLE tbl_rent;
+
+CREATE SEQUENCE SEQ_RENT START WITH 1 INCREMENT BY 1;
+
+SELECT * FROM tbl_rent;
+
+commit;
