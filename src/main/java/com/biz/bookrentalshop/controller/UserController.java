@@ -28,4 +28,13 @@ public class UserController {
 		return "rent_body/user_s_list";
 	} 
 	
+	@RequestMapping(value="/join",method=RequestMethod.GET)
+	public String user_join(Model model) {
+		
+		
+//		model.addAttribute("LIST",userlist);
+		
+		return "user_body/user_join";
+	}
+	
 }

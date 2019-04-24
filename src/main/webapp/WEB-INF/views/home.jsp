@@ -106,7 +106,7 @@ $(function(){
 <nav id="main-nav">
 	<a href="#">책나라 도서관</a>
 	<a href="#">로그인</a>
-	<a href="#">회원가입</a>
+	<a href="${rootPath}/user/join">회원가입</a>
 	<a href="${rootPath}/admin/">관리자</a>
 </nav>
 <section id="main-container">

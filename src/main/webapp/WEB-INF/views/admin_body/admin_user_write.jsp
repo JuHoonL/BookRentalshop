@@ -50,6 +50,14 @@ $(function(){
 <div id="div-onef">
 	<input type="hidden" id="user_seq" name="user_seq" value="<c:out value='${VO.user_seq}' default='0' />" />
 	
+	<input type="text" id="user_id" name="user_id" placeholder="아이디" value="${VO.user_id}" />
+	
+	<input type="text" id="user_password" name="user_password" placeholder="비밀번호" />
+	
+	<input type="text" id="user_re_password" name="user_re_password" placeholder="비밀번호확인" />
+	
+	<input type="text" id="user_role" name="user_role" placeholder="관리권한" value="${VO.user_role}" />
+	
 	<input type="text" id="user_name" name="user_name" placeholder="이름" value="${VO.user_name}" />
 	
 	<input type="text" id="user_birth" name="user_birth" placeholder="생년월일" value="${VO.user_birth}" />
@@ -66,6 +74,8 @@ $(function(){
 	<input type="text" id="user_out_date" name="user_out_date" placeholder="탈퇴일" value="${VO.user_out_date}" />
 	
 	<input type="text" id="user_out_yn" name="user_out_yn" placeholder="탈퇴여부(Y/N)" value="${VO.user_out_yn}" />
+	
+	<input type="text" id="user_point" name="user_point" placeholder="유저 구입포인트" value="${VO.user_point}" />
 	
 	<input type="text" id="user_rent_count" name="user_rent_count" placeholder="총 대여회수" value="${VO.user_rent_count}" />
 	

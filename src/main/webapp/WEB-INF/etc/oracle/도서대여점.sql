@@ -28,6 +28,7 @@ CREATE TABLE tbl_juser (
     USER_SEX	        CHAR(1),		
     USER_PHONE	        nVARCHAR2(100)	    NOT	NULL,
     USER_MAIL	        nVARCHAR2(1000),		
+    USER_ORG_IMAGE	    nVARCHAR2(125),
     USER_IMAGE	        nVARCHAR2(125),		
     USER_REG_DATE	    CHAR(10),		
     USER_OUT_DATE	    CHAR(10),		
