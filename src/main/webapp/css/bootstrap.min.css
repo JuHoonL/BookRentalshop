@@ -2014,7 +2014,11 @@ select.form-control:focus::-ms-value {
 	background-color: #fff
 }
 
-.form-control-file, .form-control-range {
+.form-control-file {
+	display: inline-block;
+}
+
+.form-control-range {
 	display: block;
 	width: 100%
 }
@@ -2539,6 +2543,10 @@ textarea.form-control {
 	}
 }
 
+#btn-div {
+	float: right;
+}
+
 .btn {
 	display: inline-block;
 	font-weight: 400;
@@ -2599,7 +2607,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 	border-color: #333
 }
 
-.btn-primary:hover {
+.-primary:hover {
 	color: #fff;
 	background-color: #202020;
 	border-color: #1a1919

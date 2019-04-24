@@ -7,7 +7,7 @@
 #join-body {
 	margin: 5px auto;
 	padding: 10px;
-	width: 60%;
+	width: 40%;
 	border: 1px solid blue;
 }
 
@@ -76,17 +76,17 @@ label, select {
     </div>
     
     <div class="form-group row">
-      <label for="user_mail" class="col-sm-2 col-form-label">컨트롤러에서 관리권한 가입일 탈퇴일 구입포인트 총대여회수 총대여금액 입력</label>
-        <input type="email" class="form-control-plaintext" id="user_mail" name="user_mail" value="${VO.user_id}" ><br />
-        <small id="user_mail_error" class="form-text text-muted"></small>
+      <p>컨트롤러에서 관리권한 가입일 탈퇴일 구입포인트 총대여회수 총대여금액 입력</p>
     </div>
     
     <div class="form-group">
-      <label for="user_image">회원사진</label>
+      <label for="user_image" class="col-sm-2 col-form-label">회원사진</label>
       <input type="file" class="form-control-file" id="user_image" name="user_image" aria-describedby="fileHelp">
       <small id="fileHelp" class="form-text text-muted"></small>
     </div>
     
-    <button type="button" class="btn btn-primary" id="btn-save">회원정보 저장</button>
+    <div id="btn-div">
+    	<button type="button" class="btn btn-primary" id="btn-save">회원정보 저장</button>
+    </div>
   </fieldset>
 </form>
