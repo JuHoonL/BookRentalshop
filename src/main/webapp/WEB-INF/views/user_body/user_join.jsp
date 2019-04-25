@@ -4,21 +4,31 @@
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
 <link rel="stylesheet" href="${rootPath}/css/bootstrap.min.css" />
 <style>
+
 #join-body {
-	margin: 5px auto;
+	margin: 20px auto;
 	padding: 10px;
 	width: 40%;
-	border: 1px solid blue;
+}
+
+#join-legend {
+	text-align: center;
 }
 
 label, select {
 	width: 70%;
 	text-align: right;
 }
+
+#join-btn-div {
+	width: 20%;
+	margin: 30px auto;
+	align-items: center;
+}
 </style>
 <form method="POST" enctype="multipart/form-data">
   <fieldset id="join-body">
-    <legend>회원가입</legend>
+    <legend id="join-legend">회원가입</legend>
     <div class="form-group row">
       <div class="col-sm-10">
         <input type="hidden" class="form-control-plaintext" id="user_seq" name="user_seq" value="<c:out value='${VO.user_seq}' default='0' />"><br />
@@ -55,7 +65,7 @@ label, select {
         <small id="user_birth_error" class="form-text text-muted"></small>
     </div>
     
-    <div class="form-group">
+    <div class="form-group row">
       <label for="user_sex" class="col-sm-2 col-form-label">성별</label>
       <select class="form-control-plaintext" id="user_sex" name="user_sex">
         <option value="M" <c:if test="${VO.user_sex == 'M'}">selected="selected"</c:if>>남</option>
@@ -85,7 +95,7 @@ label, select {
       <small id="fileHelp" class="form-text text-muted"></small>
     </div>
     
-    <div id="btn-div">
+    <div id="join-btn-div">
     	<button type="button" class="btn btn-primary" id="btn-save">회원정보 저장</button>
     </div>
   </fieldset>
